@@ -50,7 +50,7 @@ if(!empty($erros)):
   ?>    
        
       
-     <form  method="POST" action="valida_login">
+     <form  method="POST" action="valida_login.php">
      
       <label name ='usuario' class="sr-only">Usuário</label>
       <div class="col-sm-12">

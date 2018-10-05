@@ -32,9 +32,9 @@
     <body style="background-image:url(img/backfinal.jpg);">
 
 
-  <conteiner class="card " style=" padding: 20px; width:  850px;">  
+  <conteiner class="card " style=" padding: 20px; width:  855px;">  
   
-<form method="POST" action="valida_cadastro_proj"  >
+<form method="POST" action="valida_cadastro_proj.php">
     <h1 class="text-center"> Cadastro de Projeto  </h1>
       
 
@@ -61,8 +61,8 @@
       <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail de contato">
     </div>
     <div class="col">
-       <label class="control-label col-sm-3" for="text">Trelo:</label>
-      <input type="text" class="form-control" id="trelo" name="trelo" placeholder="Digite seu Trelo">
+       <label class="control-label col-sm-3" for="text">Categoria</label>
+      <input type="text" class="form-control" id="tag" name="tag" placeholder="Digite a categoria do seu projeto">
     </div>
   </div>
     <div class="form-group">
