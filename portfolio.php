@@ -54,12 +54,25 @@ $row_projetos = mysqli_fetch_assoc($resultado_projetos);
  <section class="jumbotron text-center" style="background-image: url(img/start_up.jpg);">
         <div class="container">
           <br>
-          <h1 class="jumbotron-heading" style="color: #ffff ">Tire suas  ideias  do papel</h1>
+          <br>
+		  <br>
+		  <br>
+		  
+		  <h1 class="jumbotron-heading" style="color: #ffff ">Tire suas  ideias  do papel</h1>
           <h2 class="lead text-muted"></h2>
           <p>
-           <!-- <a href="form_cadastro - projetos.php" class="btn btn-primary my-2">cadastre seus Projetos</a> -->
-           
+           <!-- <a href="form_cadastro - projetos.php" class="btn btn-primary my-2">cadastre seus Projetos</a> -->		  
           </p>
+		  
+		 
+				<form action="" method="post" enctype="multipart/form-data">
+					<span></span>
+						<select name="Categoria">
+							<option value="" selected="selected">Selecione uma categoria</option>
+							
+						</select>	
+				</form>
+		  
         </div>
       </section>
     <!-- Page Content -->

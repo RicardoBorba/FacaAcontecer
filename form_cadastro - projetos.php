@@ -23,8 +23,8 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " >
       <a class="navbar-brand" href="index.php">Faça Acontecer</a> </nav>
-
-
+  
+	  
 <!--class="form-horizontal"-->
  
   
@@ -83,13 +83,22 @@
   </div>
 
  <input class="btn btn-success col-sm-4" type="submit" name="btnCadastro" value="Concluir">
-      
-      
+ 
 </form>
+
+	
+
 
 
   </div>
 </div>
+
+
+
+		<div class="voltar"  >	
+		<a class="navbar-brand2" href="portfolio.php">Voltar</a> </nav>
+		</div>
+
 
   <!--
   <div class="form-group  ">

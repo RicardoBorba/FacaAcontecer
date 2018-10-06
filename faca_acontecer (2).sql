@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 05-Out-2018 às 21:33
+-- Generation Time: 06-Out-2018 às 06:52
 -- Versão do servidor: 10.1.36-MariaDB
 -- versão do PHP: 7.2.10
 
@@ -70,9 +70,17 @@ CREATE TABLE `projetos` (
 --
 
 INSERT INTO `projetos` (`id_projetos`, `data_created`, `nome_projeto`, `img_projeto`, `resumo_projetos`, `descricao_projeto`, `autor_projeto`, `contato_projeto`, `tag`, `email`) VALUES
-(1, '2018-10-05 18:47:49', 'Projeto 1 ', '', 'Projeto 1 ', 'projeto 2', 'Leo', NULL, 'Marketing', 'teste8@gmail.com'),
-(13, '2018-10-05 19:19:52', 'Projeto 2', '', 'tetetetete', 'tetetetete', 'Leo', NULL, 'Marketing', 'teste@gmail.com'),
-(14, '2018-10-05 19:19:52', 'Projeto 2', '', 'tetetetete', 'tetetetete', 'Leo', NULL, 'Marketing', 'teste@gmail.com');
+(29, '2018-10-06 03:31:47', 'Projeto 1', '', 'Este é o projeto 1', 'O projeto 1 faz isso', 'Leo', NULL, 'Testes de Softwere', 'testes@gmail.com'),
+(30, '2018-10-06 03:36:02', 'Projeto 2', '', 'Este é o projeto 2', 'O projeto 2 faz isso', 'Leo', NULL, 'Economia', 'economia@gmail.com'),
+(31, '2018-10-06 03:43:18', 'Projeto 3', '', 'Este é o projeto 3', 'O projeto 3 faz isso', 'Leo', NULL, 'Sustentabilidade', 'verde@gmail.com'),
+(32, '2018-10-06 03:43:22', 'Projeto 4', '', 'Este é o projeto 4', 'O projeto 4 faz isso', 'Leo', NULL, 'Saude', 'sus@gmail.com'),
+(33, '2018-10-06 03:43:24', 'Projeto 5', '', 'Este é o projeto 5', 'O projeto 5 faz isso', 'Leo', NULL, 'Economia', 'amarelo@gmail.com'),
+(34, '2018-10-06 03:43:25', 'Projeto 6', '', 'Este é o projeto 6', 'O projeto 6 faz isso', 'Leo', NULL, 'Gestão', 'azul@gmail.com'),
+(35, '2018-10-06 03:43:26', 'Projeto 7', '', 'Este é o projeto 7', 'O projeto 7 faz isso', 'Leo', NULL, 'Tecnologia', 'tec@gmail.com'),
+(36, '2018-10-06 03:43:28', 'Projeto 8', '', 'Este é o projeto 8', 'O projeto 8 faz isso', 'Leo', NULL, 'Tecnologia', 'tecs@gmail.com'),
+(37, '2018-10-06 03:43:30', 'Projeto 9', '', 'Este é o projeto 9', 'O projeto 9 faz isso', 'Leo', NULL, 'Politica', 'gov@gmail.com'),
+(38, '2018-10-06 03:43:32', 'Projeto 10', '', 'Este é o projeto 10', 'O projeto 10 faz isso', 'Leo', NULL, 'Saude', 'stajoana@gmail.com'),
+(39, '2018-10-06 03:43:35', 'Projeto 11', '', 'Este é o projeto 11', 'O projeto 11 faz isso', 'Leo', NULL, 'Gastronomia', 'comer@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -95,6 +103,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`nome`, `email`, `usuario`, `senha`, `id_usuario`) VALUES
 ('Leonardo Silveira', 'leonardo.allan@hotmail.com', 'leoteste', '25d55ad283aa400af464c76d713c07ad', 1),
 ('Milton Vieira', 'milton@gmail.com', 'milto', '25d55ad283aa400af464c76d713c07ad', 3),
+('Nicolau', 'nicolau@gmail.com', 'nicolau', '25f9e794323b453885f5181f1b624d0b', 4),
 ('João Borba', 'teste@gmail.com', 'porchat', '25d55ad283aa400af464c76d713c07ad', 2);
 
 --
@@ -135,13 +144,13 @@ ALTER TABLE `conta`
 -- AUTO_INCREMENT for table `projetos`
 --
 ALTER TABLE `projetos`
-  MODIFY `id_projetos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_projetos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

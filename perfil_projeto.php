@@ -77,11 +77,23 @@ $row_projetos = mysqli_fetch_assoc ($resultado_projetos);
         </div>
 
         <div class="col-md-4">
-          <h3 class="my-3">Descrição do projeto</h3>
+          <h3 class="my-3">Categoria do projeto</h3>
+          <p> <?php echo $row_projetos['tag'];?> </p>
+		  <h3 class="my-3">Descrição do projeto</h3>
           <p> <?php echo $row_projetos['descricao_projeto'];?> </p>
           <h3 class="my-3">Email de contato</h3>
-          <h3 class="my-3">Project Details</h3>
-          <ul>
+          <p> <?php echo $row_projetos['email'];?> </p>
+		  <h3 class="my-3">Detalhes do projeto</h3>
+		  <p> <?php echo $row_projetos['resumo_projetos'];?> </p>
+        </div>  
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		
+		<div class="footer">  
+		  <ul>
             <li>Lorem Ipsum</li>
             <li>Dolor Sit Amet</li>
             <li>Consectetur</li>
