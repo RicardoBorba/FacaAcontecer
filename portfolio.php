@@ -68,8 +68,13 @@ $row_projetos = mysqli_fetch_assoc($resultado_projetos);
 				<form action="" method="post" enctype="multipart/form-data">
 					<span></span>
 						<select name="Categoria">
-							<option value="" selected="selected">Selecione uma categoria</option>
-							
+							<?php
+							$consulta = "select tag from projetos";
+							$resultado = mysqli_query($connect, $consulta);
+							while($row=mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
+							echo "<option value='".$row['tag']."'>".$row['tag']."</option>";
+							}
+							?>
 						</select>	
 				</form>
 		  
