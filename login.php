@@ -1,5 +1,6 @@
 
-<?php session_start(); ?>
+<?php session_start();
+$_SESSION["portfolioFiltro"]?>
 
 <!DOCTYPE html>
 
@@ -20,18 +21,18 @@
     <script src="js/ie-emulation-modes-warning.js"></script>
 
   </head>
- 
- 
+
+
   <body  class="text-center " style="background-image: url(img/backfinal.jpg);">
 
-     
- 
-     
-    
+
+
+
+
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="home2.php">Faça Acontecer</a> </nav>
 
-      <conteiner class="card " style="padding: 10px; width:  400px;">   
+      <conteiner class="card " style="padding: 10px; width:  400px;">
 
       <h1 class="h3 mb-3 font-weight-normal"> Login</h1>
 
@@ -39,33 +40,33 @@
       <br>
       <br>
 
-     
-  <?php 
+
+  <?php
 
 if(!empty($erros)):
         foreach ($erros as $erro):
           echo $erro;
         endforeach;
       endif;
-  ?>    
-       
-      
+  ?>
+
+
      <form  method="POST" action="valida_login.php">
-     
+
       <label name ='usuario' class="sr-only">Usuário</label>
       <div class="col-sm-12">
            <input type="text" class="form-control" name="usuario" placeholder="Usuário"><br>
       </div>
-     
+
       <label name = 'senha' class="sr-only">Senha</label>
       <div class="col-sm-12">
           <input type="password" class="form-control" name="senha" placeholder="Senha"><br><br>
       </div>
       <form class="form-inline">
       <input class="btn btn-success" type="submit" name="btnLogin" value="Acessar">
-      
+
       <a  class="btn btn-success"  href="form_cadastro.php">cadastre-se</a>
-      
+
        <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
       </form>
 
@@ -74,6 +75,6 @@ if(!empty($erros)):
 
 </conteiner>
  </div>
-</span>  
+</span>
   </body>
 </html>

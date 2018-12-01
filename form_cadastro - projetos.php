@@ -1,5 +1,7 @@
 
-
+<?php
+include_once ("conexaobd.php");
+?>
 
 <!doctype html>
 <html lang="en">
@@ -23,27 +25,27 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " >
       <a class="navbar-brand" href="index.php">Faça Acontecer</a> </nav>
-  
-	  
+
+
 <!--class="form-horizontal"-->
- 
-  
+
+
 
     <body style="background-image:url(img/backfinal.jpg);">
 
 
-  <conteiner class="card " style=" padding: 20px; width:  855px;">  
-  
+  <conteiner class="card " style=" padding: 20px; width:  855px;">
+
 <form method="POST" action="valida_cadastro_proj.php">
     <h1 class="text-center"> Cadastro de Projeto  </h1>
-      
 
-      <?php 
+
+      <?php
           if (isset($_SESSION ['mensagem'])):
             echo($_SESSION['mensagem']);
           endif;
           session_unset();
-        ?> 
+        ?>
         <div class="form-group">
   <div class="form-row">
     <div class="col">
@@ -62,7 +64,17 @@
     </div>
     <div class="col">
        <label class="control-label col-sm-3" for="text">Categoria</label>
-      <input type="text" class="form-control" id="tag" name="tag" placeholder="Digite a categoria do seu projeto">
+          <form action="" method="post" enctype="multipart/form-data">
+           <select name="tag">
+             <?php
+             $consulta = "select tag from tags";
+             $resultado = mysqli_query($connect, $consulta);
+             while($row=mysqli_fetch_array($resultado, MYSQLI_ASSOC)){
+             echo "<option value='".$row['tag']."'>".$row['tag']."</option>";
+             }
+             ?>
+           </select>
+       </form>
     </div>
   </div>
     <div class="form-group">
@@ -70,23 +82,23 @@
         <div class="col">
     <label for="text">Resumo do Projeto</label>
     <textarea class="form-control col-sm-15" id="resumo" name="resumo" placeholder="Breve resumo do Projeto" rows="3"></textarea>
-  </div>  
+  </div>
    <div class="col">
     <label for="text">Descrição do Projeto</label>
     <textarea class="form-control col-sm-15" id="descricao" name="descricao" placeholder="Descreva seu projeto" rows="5"></textarea>
   </div>
 
-  
+
   <div class="form-group">
     <label for="exampleFormControlFile1">Imagem do Projeto</label>
     <input type="file" class="form-control-file" name="img" id="exampleFormControlFile1">
   </div>
 
  <input class="btn btn-success col-sm-4" type="submit" name="btnCadastro" value="Concluir">
- 
+
 </form>
 
-	
+
 
 
 
@@ -95,7 +107,7 @@
 
 
 
-		<div class="voltar"  >	
+		<div class="voltar"  >
 		<a class="navbar-brand2" href="portfolio.php">Voltar</a> </nav>
 		</div>
 
@@ -121,8 +133,8 @@
     <textarea class="form-control col-sm-4" id="Resumo" rows="3"></textarea>
   </div>
 
- 
-   
+
+
     <div class=" col-sm-offset-2 col-sm-4">
       <button type="submit" name="btn-cadastrar" class=" btn btn-lg btn-primary btn-block">Cadastrar</button>
     </div>
@@ -132,7 +144,3 @@
 
 </body>
 -->
-
-
-
-

@@ -1,7 +1,9 @@
 <?php
 
 include_once ("conexaobd.php");
-$result_projetos = "SELECT * FROM projetos";
+$selectedOption = $_POST["categoria"];
+$result_projetos = "SELECT * FROM projetos where tag='" . $selectedOption . "'";
+
 $resultado_projetos = mysqli_query ($connect, $result_projetos);
 $row_projetos = mysqli_fetch_assoc($resultado_projetos);
 
